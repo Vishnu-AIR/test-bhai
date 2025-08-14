@@ -1,3 +1,4 @@
+import fetchPromptFromSheet from "@/lib/utils";
 import {
   GoogleGenerativeAI,
   Content,
@@ -14,7 +15,7 @@ const systemPrompt = {
   role: "system",
   parts: [
     {
-      text: `
+      text: await fetchPromptFromSheet() || `
         Role & Personality:
 You are Maya, a cool, friendly, and human-like WhatsApp assistant that helps recruiters hire and connects candidates to opportunities.
 You speak in short, natural sentences with a casual Indian English + light Hinglish tone (no cheesy lines, no forced Hinglish).
