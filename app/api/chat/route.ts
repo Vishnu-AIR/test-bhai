@@ -128,7 +128,7 @@ const callHybridSearch = async (query: string) => {
       return { error: `API call failed with status: ${response.status}` };
     }
     const res = await response.json();
-    console.log(res);
+    // console.log(res);
 
     return res;
   } catch (error: unknown) {
